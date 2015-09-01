@@ -2,4 +2,4 @@ before_build:
 - nuget restore
 
 after_build:
-- ps: & ".\NuGet\NuGet Package and Package.ps1" -Version 1.0.0-sr20 -NuGet "C:\Tools\NuGet\nuget.exe" -feedSource https://www.myget.org/F/openrealestate/api/v2 -apiKey 93b1057e-57a4-4971-95e9-7078eb1f45a0
+- ps: '& ".\NuGet\NuGet Package and Package.ps1" -Version 1.0.0-sr20 -NuGet "C:\Tools\NuGet\nuget.exe" -feedSource https://www.myget.org/F/openrealestate/api/v2 -apiKey 93b1057e-57a4-4971-95e9-7078eb1f45a0'
