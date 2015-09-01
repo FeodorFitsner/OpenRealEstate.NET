@@ -154,7 +154,7 @@ function PackageTheSpecifications()
 
     foreach($file in $files)
     {
-        &$nugetExe pack $file -Version $version -OutputDirectory $destination
+        &$nugetExe pack ($file.FullName) -Version $version -OutputDirectory $destination
 
         ""
     }
