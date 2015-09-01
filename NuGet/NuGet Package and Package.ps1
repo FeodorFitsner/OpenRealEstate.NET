@@ -9,8 +9,8 @@
 param (
   [string]$version = "",
   [string]$apiKey = "",
-  [string]$source = $PSScriptRoot,
-  [string]$destination = $PSScriptRoot,
+  [string]$source = "",
+  [string]$destination = "",
   [string]$feedSource = "https://nuget.org",
   [string]$nuget = "",
   [switch]$clean = $false,
