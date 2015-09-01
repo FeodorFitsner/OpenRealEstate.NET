@@ -224,7 +224,7 @@ else
 {
     DisplayCommandLineArgs
 
-    CleanUp
+    #CleanUp
 
     PackageTheSpecifications
 
