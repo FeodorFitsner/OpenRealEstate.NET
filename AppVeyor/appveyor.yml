@@ -1,0 +1,36 @@
+
+#######################################
+# No deployment for not-master pushes.
+#######################################
+
+version: '{build}'
+configuration: Release
+
+environment:
+  apiKey:
+    secure: mD3FPCEX0G8fa8s9p33qiMKI6NnwOyXkkm9T74Y4Wl9K8IZuV8GLk6oMknWBCzm/
+
+branches:
+  except:
+    - master
+
+
+before_build:
+  - nuget restore
+
+
+build:
+  parallel: true
+  verbosity: minimal
+
+
+artifacts:
+  - path: '**\*.nupkg'
+
+
+after_build:
+  - ps: Write-Host $env:appveyor_build_version
+  - ps: '& ".\NuGet\NuGet Package and Package.ps1" -Version $env:appveyor_build_version -NuGet "C:\Tools\NuGet\nuget.exe" -feedSource https://www.myget.org/F/openrealestate/api/v2 -apiKey $env:apiKey'
+
+cache:
+  - packages -> **\packages.config
