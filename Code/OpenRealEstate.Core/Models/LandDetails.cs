@@ -149,8 +149,8 @@ namespace OpenRealEstate.Core.Models
             }
             IsAreaModified = false;
 
-            if (Frontage.IsModified)
-            {
+            if (Frontage != null)
+            { 
                 Frontage.ClearAllIsModified();
             }
             IsFrontageModified = false;
