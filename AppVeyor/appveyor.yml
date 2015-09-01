@@ -3,7 +3,7 @@
 # No deployment for not-master pushes.
 #######################################
 
-version: 1.0.0-sr'{build}'
+version: 1.0.0-sr{build}
 configuration: Release
 
 environment:
