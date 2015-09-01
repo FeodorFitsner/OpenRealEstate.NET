@@ -222,7 +222,7 @@ if ($help)
 }
 else
 {
-    DisplayCommandLineArgs
+    #DisplayCommandLineArgs
 
     #CleanUp
 
