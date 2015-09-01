@@ -199,8 +199,6 @@ function PushThePackagesToNuGet()
 $ErrorActionPreference = "Stop"
 $global:nugetExe = ""
 
-cls
-
 ""
 " ---------------------- start script ----------------------"
 ""
